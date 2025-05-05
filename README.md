@@ -26,7 +26,6 @@
 - beautifulsoup4
 - lxml
 - requests
-- tkinter
 - ttkthemes
 
 ## 翻译示例1
