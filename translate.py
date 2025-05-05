@@ -77,13 +77,3 @@ def translate_html_file(input_path, output_path, src_lang, dest_lang):
 
 # 示例调用
 # translate_html_file("example.html", "translated_example.html", src_lang="zh", dest_lang="ar")
-# translate_html_file("./danglive-thy.github.io/试了几周在电脑上保留了3个大模型/index.html", "./danglive-thy.github.io/试了几周在电脑上保留了3个大模型/index_en.html", src_lang="zh", dest_lang="en")
-
-
-# if __name__ == "__main__":
-#     translate_html_file(
-#         "./danglive-thy.github.io/试了几周在电脑上保留了3个大模型/index.html",
-#         "./danglive-thy.github.io/试了几周在电脑上保留了3个大模型/index_en.html",
-#         src_lang="zh",
-#         dest_lang="en"
-#     )

@@ -2,9 +2,8 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from tkinter.scrolledtext import ScrolledText
 from ttkthemes import ThemedTk  # 需要安装 ttkthemes 模块
-# 或者使用 tkinter 的 ttk.Style() 自定义样式
 import os
-import translate  # 引入你提供的 translate.py 模块
+import translate  # translate.py 模块
 import time
 import threading
 
@@ -53,14 +52,6 @@ class TranslationApp:
         self.path_entry = ttk.Entry(file_frame)
         self.path_entry.pack(fill=tk.X, pady=5)
         ttk.Button(file_frame, text="浏览", command=self.select_files).pack(anchor=tk.E)
-        # tk.Label(root, text="源文件路径:").pack(pady=5)
-        # self.path_entry = tk.Entry(root, width=100)
-        # self.path_entry.pack(pady=5, fill=tk.X)
-        # tk.Button(root, text="浏览", command=self.select_files).pack(pady=5)
-
-        # 语言选择区域
-        # lang_frame = ttk.Frame(root)
-        # lang_frame.pack(pady=10, fill=tk.X, padx=10)
 
         # 多选框区域
         lang_frame = ttk.Frame(root)
@@ -88,12 +79,6 @@ class TranslationApp:
             var = tk.IntVar()
             ttk.Checkbutton(right_col, text=name, variable=var).pack(anchor='w')
             self.check_vars[name] = var
-        # self.check_vars = {}
-        # for lang_name in LANGUAGES:
-        #     var = tk.IntVar()
-        #     ttk.Checkbutton(lang_frame, text=lang_name, variable=var).pack(anchor='w')
-        #     # tk.Checkbutton(root, text=lang_name, variable=var).pack(anchor='w')
-        #     self.check_vars[lang_name] = var
         
         # 按钮区域
         btn_frame = ttk.Frame(root)
@@ -102,15 +87,6 @@ class TranslationApp:
         self.select_all_button.pack(side=tk.LEFT, padx=5)
         self.toggle_all_button = ttk.Button(btn_frame, text="反选", command=self.toggle_all)
         self.toggle_all_button.pack(side=tk.LEFT, padx=5)
-        # 全选 / 反选按钮
-        # control_frame = tk.Frame(root)
-        # control_frame.pack(pady=5)
-        # tk.Button(control_frame, text="全选", command=self.select_all).pack(side=tk.LEFT, padx=5)
-        # tk.Button(control_frame, text="反选", command=self.toggle_all).pack(side=tk.LEFT, padx=5)
-
-        # 进度条
-        # self.progress = ttk.Progressbar(root, orient="horizontal", length=400, mode="determinate")
-        # self.progress.pack(pady=10)
 
         # 日志输出区域
         self.log_area = ScrolledText(root, height=30, wrap=tk.WORD)
@@ -124,8 +100,7 @@ class TranslationApp:
             style="TButton"
         )
         self.translate_button.pack(pady=20, ipadx=10, ipady=5)
-        # self.translate_button = tk.Button(root, text="开始翻译", command=self.start_translation)
-        # self.translate_button.pack(pady=20)
+
     def show_about(self):
         """显示关于窗口"""
         about_text = (
