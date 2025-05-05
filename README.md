@@ -50,3 +50,13 @@
 
 [Já nevou em Altai!(pt)](https://danglive-thy.github.io/%E9%98%BF%E5%8B%92%E6%B3%B0%E5%B7%B2%E7%BB%8F%E4%B8%8B%E9%9B%AA%E4%BA%86/index_pt.html)
 
+[Es hat in Altay geschneit!(de)](https://danglive-thy.github.io/%E9%98%BF%E5%8B%92%E6%B3%B0%E5%B7%B2%E7%BB%8F%E4%B8%8B%E9%9B%AA%E4%BA%86/index_de.html)
+
+[Il neige à Altay !(fr)](https://danglive-thy.github.io/%E9%98%BF%E5%8B%92%E6%B3%B0%E5%B7%B2%E7%BB%8F%E4%B8%8B%E9%9B%AA%E4%BA%86/index_fr.html)
+
+[È nevicato ad Altay!(it)](https://danglive-thy.github.io/%E9%98%BF%E5%8B%92%E6%B3%B0%E5%B7%B2%E7%BB%8F%E4%B8%8B%E9%9B%AA%E4%BA%86/index_it.html)
+
+[アレタイに雪が降った！(ja)](https://danglive-thy.github.io/%E9%98%BF%E5%8B%92%E6%B3%B0%E5%B7%B2%E7%BB%8F%E4%B8%8B%E9%9B%AA%E4%BA%86/index_ja.html)
+
+
+
