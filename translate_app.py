@@ -11,6 +11,11 @@ import threading
 # 支持的目标语言列表
 LANGUAGES = {
     "英语 (en)": "en",
+    "法语 (fr)": "fr",
+    "德语 (de)": "de",
+    "意大利语 (it)": "it",
+    "日语 (ja)": "ja",
+    "韩语 (ko)": "ko",
     "俄语 (ru)": "ru",
     "阿拉伯语 (ar)": "ar",
     "印尼语 (id)": "id",
@@ -54,16 +59,41 @@ class TranslationApp:
         # tk.Button(root, text="浏览", command=self.select_files).pack(pady=5)
 
         # 语言选择区域
-        lang_frame = ttk.Frame(root)
-        lang_frame.pack(pady=10, fill=tk.X, padx=10)
+        # lang_frame = ttk.Frame(root)
+        # lang_frame.pack(pady=10, fill=tk.X, padx=10)
 
         # 多选框区域
+        lang_frame = ttk.Frame(root)
+        lang_frame.pack(pady=10, padx=10)
+
+        # 拆分语言列表
+        lang_items = list(LANGUAGES.items())
+        mid = len(lang_items) // 2
+        left_items = lang_items[:mid]
+        right_items = lang_items[mid:]
+
+        # 创建双列容器
+        left_col = ttk.Frame(lang_frame)
+        left_col.pack(side=tk.LEFT, fill=tk.Y)
+        right_col = ttk.Frame(lang_frame)
+        right_col.pack(side=tk.LEFT, fill=tk.Y)
+
+        # 填充复选框
         self.check_vars = {}
-        for lang_name in LANGUAGES:
+        for name, code in left_items:
             var = tk.IntVar()
-            ttk.Checkbutton(lang_frame, text=lang_name, variable=var).pack(anchor='w')
-            # tk.Checkbutton(root, text=lang_name, variable=var).pack(anchor='w')
-            self.check_vars[lang_name] = var
+            ttk.Checkbutton(left_col, text=name, variable=var).pack(anchor='w')
+            self.check_vars[name] = var
+        for name, code in right_items:
+            var = tk.IntVar()
+            ttk.Checkbutton(right_col, text=name, variable=var).pack(anchor='w')
+            self.check_vars[name] = var
+        # self.check_vars = {}
+        # for lang_name in LANGUAGES:
+        #     var = tk.IntVar()
+        #     ttk.Checkbutton(lang_frame, text=lang_name, variable=var).pack(anchor='w')
+        #     # tk.Checkbutton(root, text=lang_name, variable=var).pack(anchor='w')
+        #     self.check_vars[lang_name] = var
         
         # 按钮区域
         btn_frame = ttk.Frame(root)
